@@ -5,6 +5,7 @@ Reusable prompts for AI agents.
 - [deepen-task](skills/deepen-task/SKILL.md): improve methods and validation.
 - [raise-altitude](skills/raise-altitude/SKILL.md): focus on the intended outcome.
 - [broaden-range](skills/broaden-range/SKILL.md): use methods from other fields.
+- [pair-program](skills/pair-program/SKILL.md): work with a persistent navigator; defaults to OpenCode.
 
 ## Install
 
@@ -24,8 +25,10 @@ Without mise, replace `mise x npm:skills -- skills` with `npx skills`. Once push
 
 Use `$deepen-task <task>` in Codex or `/deepen-task <task>` in Claude Code.
 
+Use `$pair-program <task>` to pair with OpenCode, or `$pair-program Use pi as navigator: <task>` to choose another agent.
+
 ## Add a skill
 
 Create `skills/<name>/SKILL.md` with YAML `name` and `description` fields, then add it to the list above.
 
-`deepen-task` uses [Felix Rieseberg’s prompt](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/); the other two adapt ideas from the same post.
+`deepen-task` uses [Felix Rieseberg’s prompt](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/); `raise-altitude` and `broaden-range` adapt ideas from the same post.
